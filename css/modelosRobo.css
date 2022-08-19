@@ -1,0 +1,93 @@
+.opcoes_titulo{
+    color: var(--main-branco);
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+.modelos_box-scroll{
+    height: 100px;
+}
+.modelos_box{
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: 408px;
+    overflow: scroll;
+    width: 100%;
+}
+
+/* ========== Style Scroll ========== */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+::-webkit-scrollbar-track {
+border: 1px solid rgb(116, 39, 230);
+border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb {
+background: rgb(116, 39, 230);  
+border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+background: rgb(126, 53, 236);  
+}
+
+/* ========== Grid Template ========== */
+.modelos_box-boxRobo:nth-child(1) {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+.modelos_box-boxRobo:nth-child(2){
+    grid-area: 2/2;
+    grid-row: 1/1;
+}
+.modelos_box-boxRobo:nth-child(3){
+    grid-area: 1/1;
+    grid-row: 2/2;
+    margin-top: 2.5rem;
+}
+.modelos_box-boxRobo:nth-child(4){
+    grid-area: 2/2;
+    grid-row: 2/2;
+    margin-top: 2.5rem;
+}
+.modelos_box-boxRobo:nth-child(5){
+    grid-area: 1/1;
+    grid-row: 3/3;
+    margin-top: 5rem;
+}
+.modelos_box-boxRobo:nth-child(6){
+    grid-area: 2/2;
+    grid-row: 3/3;
+    margin-top: 5rem;
+}
+
+
+.boxRobo-action{
+    text-decoration: none;
+}
+.boxRobo-img{
+    align-items: center;
+    background: rgba(0, 0, 0, 0.173);
+    width: 100%;
+}
+.boxRobo-img:hover{
+    background: radial-gradient(rgb(255, 0, 0), rgb(246, 246, 5)); 
+}
+
+.modelos_box-tituloColor{
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: .7rem;
+    margin-top: -2rem;
+    text-align: center;
+}

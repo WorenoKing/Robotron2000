@@ -1,0 +1,23 @@
+/*opções*/
+.montador-conteudo_opcoes{
+    display: block;
+}
+
+/*modelos*/
+.montador-conteudo-modelos{
+    display: none;
+}
+
+/* Estatisticas */
+.montador-conteudo_config{
+    height: 100%;
+    display: none;
+}
+.estatisticas {
+    display: none;
+}
+
+/* Fundos */
+.montador-conteudo_fundos{
+    display: none;
+}

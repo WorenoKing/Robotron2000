@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/componentes.css">
+    <link rel="stylesheet" href="./css/opcoesRobo.css">
+    <link rel="stylesheet" href="./css/modelosRobo.css">
+    <link rel="stylesheet" href="./css/fundosRobo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Robotron 2000</title>
+</head>
+<body class="prepareFundo ">
+    <main>
+        <section class="robotron">
+            <img class="robo" src="./img/robotron.png" alt="Robotron" id="robotron" data-roboTipo>
+            <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+        </section>
+
+        <section class="box estatisticas" meta-estatistica>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Força</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero" id="forca" data-estatistica="forca">0</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Poder</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero" id="poder" data-estatistica="poder">0</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Energia</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero" id="energia" data-estatistica="energia">0</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Velocidade</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero" id="velocidade" data-estatistica="velocidade">0</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="equipamentos">
+            <form action="" class="montador">
+                <div class="box montador-conteudo">
+                    
+                    <!-- ==========  Opções  ==========-->
+                    <div class="montador-conteudo_opcoes" meta-opcoes>
+                        <h2 class="opcoes_titulo">Montadora Robotron2000</h2>
+                        <div class="opcoes">
+                            <a class="opcoes-btn" meta-modelos href="#">Modelos</a>
+                            <a class="opcoes-btn" meta-componentes href="#">Componentes</a>
+                            <a class="opcoes-btn" meta-fundo href="#">Fundo</a>
+                        </div>
+                    </div> 
+
+                    <!-- ==========  Modelos  ==========-->
+                    <div class="montador-conteudo-modelos" meta-modelosPage>
+                        <div class="btn-voltar">
+                            <a class="btn-superior" onclick="back()"><p class="btn-voltar_icon"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></p></a>
+                        </div>
+                        <h2 class="opcoes_titulo">Modelos</h2>
+                        <div class="modelos_box-scroll">
+                            <div class="modelos_box">
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboAzul src="img/robotron.png" alt="Robotron200 azul">
+                                        <h3 class="modelos_box-tituloColor">Azul</h3>
+                                    </a>
+                                </div>
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboVermelho src="img/robotron-vermelho.png" alt="Robotron200 vermelho">
+                                        <h3 class="modelos_box-tituloColor">Vermelho</h3>
+                                    </a>
+                                </div>
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboAmarelo src="img/robotron-amarelo.png" alt="Robotron200 amarelo">
+                                        <h3 class="modelos_box-tituloColor">Amarelo</h3>
+                                    </a>
+                                </div>
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboPink src="img/robotron-pink.png" alt="Robotron200 rosa">
+                                        <h3 class="modelos_box-tituloColor">Pink</h3>
+                                    </a>
+                                </div>
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboBlack src="img/robotron-black.png" alt="Robotron200 preto">
+                                        <h3 class="modelos_box-tituloColor">Preto</h3>
+                                    </a>
+                                </div>
+                                <div class="modelos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-roboBranco src="img/robotron-branco.png" alt="Robotron200 branco">
+                                        <h3 class="modelos_box-tituloColor">Branco</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- ==========  Caracteristicas e Estatisticas  ==========-->
+                   <div class="montador-conteudo_config" meta-configPage>
+                    <div class="btn-voltar">
+                        <a class="btn-superior" onclick="back()"><p class="btn-voltar_icon"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></p></a>
+                    </div>
+                       <div class="peca">
+                           <label for="" class="peca-titulo">Braços</label>
+                           <div class="controle">
+                               <buttom class="controle-ajuste" data-controle="-" data-peca="bracos">-</buttom>
+                               <input type="text" class="controle-contador" value="00" data-contador>
+                               <buttom class="controle-ajuste" data-controle="+" data-peca="bracos">+</buttom>
+                           </div>
+                       </div>
+                       <hr class="linha">
+                       <div class="peca">
+                           <label for="" class="peca-titulo">Blindagem</label>
+                           <div class="controle">
+                               <buttom class="controle-ajuste" data-controle="-" data-peca="blindagem">-</buttom>
+                               <input type="text" class="controle-contador" value="00" data-contador>
+                               <buttom class="controle-ajuste" data-controle="+" data-peca="blindagem">+</buttom>
+                           </div>
+                       </div>
+                       <hr class="linha">
+                       <div class="peca">
+                           <label for="" class="peca-titulo">Núcleos</label>
+                           <div class="controle">
+                               <buttom class="controle-ajuste" data-controle="-" data-peca="nucleos">-</buttom>
+                               <input type="text" class="controle-contador" value="00" data-contador>
+                               <buttom class="controle-ajuste" data-controle="+" data-peca="nucleos">+</buttom>
+                           </div>
+                       </div>
+                       <hr class="linha">
+                       <div class="peca">
+                           <label for="" class="peca-titulo">Pernas</label>
+                           <div class="controle">
+                               <buttom class="controle-ajuste" data-controle="-" data-peca="pernas">-</buttom>
+                               <input type="text" class="controle-contador" value="00" data-contador>
+                               <buttom class="controle-ajuste" data-controle="+" data-peca="pernas">+</buttom>
+                           </div>
+                       </div>
+                       <hr class="linha">
+                       <div class="peca">
+                           <label for="" class="peca-titulo">Foguetes</label>
+                           <div class="controle">
+                               <buttom class="controle-ajuste" data-controle="-" data-peca="foguetes">-</buttom>
+                               <input type="text" class="controle-contador" value="00" data-contador>
+                               <buttom class="controle-ajuste" data-controle="+" data-peca="foguetes">+</buttom>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- ==========  Fundos  ==========-->
+                   <div class="montador-conteudo_fundos" meta-fundosPage>
+                    <div class="btn-voltar">
+                        <a class="btn-superior" onclick="back()"><p class="btn-voltar_icon"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></p></a>
+                    </div>
+                    <h2 class="opcoes_titulo">Fundos</h2>
+                    <div class="fundos_box">
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-zimba src="img/fundo.jpg" alt="Fundo azul zimba">
+                                        <h3 class="fundos_box-tituloColor">Zimba</h3>
+                                    </a>
+                                </div>
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-canhao src="img/fundoCanhao.jpg" alt="Fundo grande canhao">
+                                        <h3 class="fundos_box-tituloColor">O canhão</h3>
+                                    </a>
+                                </div>
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-estaleiro src="img/fundoEstaleiro.jpg" alt="Fundo estaleiro da federação">
+                                        <h3 class="fundos_box-tituloColor">Estaleiro</h3>
+                                    </a>
+                                </div>
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-guerra src="img/fundoGuerra.jpg" alt="Fundo da grande batalha">
+                                        <h3 class="fundos_box-tituloColor">Batalha</h3>
+                                    </a>
+                                </div>
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-nave src="img/fundoNave.jpg" alt="Fundo da nave mãe">
+                                        <h3 class="fundos_box-tituloColor">Nave Mãe</h3>
+                                    </a>
+                                </div>
+                                <div class="fundos_box-boxRobo">
+                                    <a class="boxRobo-action" href="#">
+                                        <img class="boxRobo-img" data-planeta src="img/fundoPlaneta.jpg" alt="Fundo planeta alienígena">
+                                        <h3 class="fundos_box-tituloColor">Cidadela</h3>
+                                    </a>
+                                </div>
+                            </div>
+
+                   </div>
+                </div>
+                <a href="#" class="producao" id="producao" data-play>Iniciar Jogo <i class="fa fa-rocket" aria-hidden="true"></i></a>
+            </form>
+        </section>
+    </main>
+
+    <script src="./js/fundos.js"></script>
+    <script src="./js/modelos.js"></script>
+    <script src="./js/opcoes.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

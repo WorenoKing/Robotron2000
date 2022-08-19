@@ -1,0 +1,365 @@
+:root {
+    --main-cinza: #CCCCCC;
+    --main-branco: #FFFFFF;
+    --main-preto: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body, input {
+    font-family: 'Teko', sans-serif;
+}
+
+
+
+.robotron {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    flex-basis: 40%;
+    position: relative;
+}
+
+.robo {
+    z-index: 1;
+    position: absolute;
+    left: -20%;
+    top: -5%;
+}
+
+.titulo {
+    transform: rotate(180deg);
+    font-weight: 500;
+    font-size: 130px;
+    position: absolute;
+    bottom: 7rem;
+    left: -3rem;
+    line-height: 0.8;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: rgba(255,255,255,0.8);
+}
+
+.box {
+    background: rgba(0,0,0,0.6);
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+    border-left: 5px solid var(--main-cinza);
+    height: 85%;
+}
+
+/****************************** Equipamentos *****/
+
+.btn-voltar {
+    height: 40px;
+    width: 60px;
+}
+.btn-voltar_icon{
+    background: var(--main-cinza);
+    background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.552), rgba(255, 255, 0, 0.568));
+    color: #000000;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+}
+.btn-voltar_icon:hover{
+    background-image: linear-gradient(to bottom right, rgb(255, 0, 0), yellow);
+    color: var(--main-branco);
+}
+
+.montador {
+    height: 100%;
+}
+
+.montador-conteudo {
+    padding: 2em 10%;
+}
+
+.peca {
+    height: 17.5%;
+}
+
+.peca-titulo {
+    color: var(--main-branco);
+    text-transform: uppercase;
+}
+
+.controle {
+    background: var(--main-preto);
+    border-radius: 25px;
+    float: right;
+    display: inline-flex;
+    padding: 5px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.controle-contador {
+    background: none;
+    border: 0;
+    margin: 0 1rem;
+    color: var(--main-branco);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.controle-ajuste {
+    display: inline-block; 
+    border-radius: 50%;
+    color: var(--main-cinza);  
+    background: var(--main-preto);
+    text-align: center;
+    border: 3px solid var(--main-cinza);
+    cursor: pointer;
+}
+
+.linha {
+    border-color: var(--main-cinza);
+}
+
+.producao {
+    color: rgb(184, 184, 184);
+    margin-top: 1em;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid rgb(184, 184, 184);
+    background: rgb(124, 12, 12);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+}
+
+.producao:hover {
+    background: rgb(228, 22, 22);
+    color: rgb(246, 244, 244);
+    color: rgb(246, 244, 244);
+    font-size: 2.1rem;
+    font-weight: 200;
+}
+
+
+
+/****************************** Estatísticas *****/
+.equipamentos {
+    flex-basis: 32%;
+    margin: 0 auto;
+}
+.estatisticas {
+    padding: 2em 2em 0;
+}
+
+.estatistica {
+    color: var(--main-branco);
+    display: flex;
+    align-items: flex-start;
+    height: 25%;
+}
+
+.estatistica-titulo {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--main-cinza);
+    flex-basis: 40%;
+    text-transform: uppercase;
+    order: 1
+}
+
+.estatistica-valor {
+    flex-basis: 60%;
+    position: relative;
+    margin: 10px 0 0;
+    order: 2;
+    margin: -10px 0 0;
+}
+
+.estatistica-valor::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+    border: 1px solid var(--main-cinza);
+    border-radius: 50%;
+}
+
+.estatistica-numero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-46%);
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
+.estatistica:nth-child(2n) .estatistica-titulo {
+    order: 2;
+    text-align: right;
+}
+
+.estatistica:nth-child(2n) .estatistica-valor {
+    order: 1;
+    flex-basis: 35%;
+    margin: 10px 0 0;
+}
+
+
+@media screen and (max-width: 1600px) {
+    body { 
+        font-size: 14px;
+    }
+    main {
+        width: 80vw;
+        height: 80vh;
+        margin: 10vh 8vw 10vh 12vw;
+        display: flex;
+        gap: 1vw;
+    }
+    main {
+        width: 90vw;
+        height: 80vh;
+        margin: 5vh auto;
+    }
+    .btn-voltar {
+        margin: -3.9rem 0 1rem -2.6rem;
+    }
+    .btn-voltar_icon{
+        font-size: 40px;
+        width: 35px;
+    }
+    .titulo{
+        display: block;
+    }
+    .robotron{
+        background: url(../img/estrutura.png);
+    }
+    .robo{
+        height: 120%;  
+    }
+    .equipamentos {
+        flex-basis: 32%;
+    }
+    .estatisticas{
+        flex-basis: 23%;
+    }
+    .peca-titulo {
+        font-size: 2.5em;
+    }
+    .controle-contador{
+        width: 40px;
+        height: 35px;
+        font-size: 2.5em;
+    }
+    .controle-ajuste{
+        width: 40px;
+        height: 40px;
+        line-height: 44px;
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body { 
+        font-size: 13px;
+    }
+
+    main {
+        width: 96vw;
+        height: 80vh;
+        margin: 10vh auto;
+    }
+    .btn-voltar {
+        margin: -3.7rem 0 1rem -2.3rem;
+    }
+    .robo{
+        height: 110%;  
+    }
+    .controle-contador{
+        width: 30px;
+        height: 25px;
+        font-size: 2em;
+    }
+    .controle-ajuste{
+        width: 30px;
+        height: 30px;
+        line-height: 33px;
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 11px;
+    }
+    .robo{
+        height: 85%;  
+    }
+    .btn-voltar {
+        margin: -2.5rem 0 1rem -2rem;
+    }
+    .btn-voltar_icon{
+        font-size: 30px;
+        width: 28px;
+    }
+    .peca-titulo {
+        font-size: 1.7em;
+    }
+    .controle-ajuste{
+        width: 25px;
+        height: 25px;
+        line-height: 22px;
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 426px){
+    main {
+        width: 95vw;
+        height: 90vh;
+        margin: 10vh 0vw 10vh 0vw;
+        display: flex;
+        gap: 1vw;
+    }
+    .titulo{
+        display: none;
+    }
+    .robotron{
+        background: none;
+        margin-left: -130px;
+    }
+    .robo{
+        height: 45%;  
+        left: 60%;
+        top: 77vh;
+    }
+    .estatisticas{
+        flex-basis: 43%;
+        width: 2000px;
+    }
+    
+}
+
+@media screen and (max-width: 376px) {
+    .robo{
+        height: 30%;  
+        left: 100%;
+        top: 77vh; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .robotron{
+        background: none;
+        margin-left: -100px;
+    }
+    .robo{
+        height: 25%;  
+        left: 75%; 
+    }
+}

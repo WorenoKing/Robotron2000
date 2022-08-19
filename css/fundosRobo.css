@@ -1,0 +1,114 @@
+body {
+    background: url(../img/fundo.jpg);
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    height: calc(100vh - 100px);
+}
+
+.zimba {
+    background: url(../img/fundo.jpg);
+}
+.canhao {
+    background: url(../img/fundoCanhao.jpg);
+}
+.estaleiro {
+    background: url(../img/fundoEstaleiro.jpg);
+}
+.guerra {
+    background: url(../img/fundoGuerra.jpg);
+}
+.nave {
+    background: url(../img/fundoNave.jpg);
+}
+.planeta {
+    background: url(../img/fundoPlaneta.jpg);
+}
+
+.prepareFundo{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.opcoes_titulo{
+    color: var(--main-branco);
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+.fundos_box-scroll{
+    height: 100px;
+}
+.fundos_box{
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: 408px;
+    overflow: scroll;
+    width: 100%;
+}
+
+/* ========== Style Scroll ========== */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+::-webkit-scrollbar-track {
+border: 1px solid rgb(116, 39, 230);
+border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb {
+background: rgb(116, 39, 230);  
+border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+background: rgb(126, 53, 236);  
+}
+
+/* ========== Grid Template ========== */
+.fundos_box-boxRobo:nth-child(1) {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+.fundos_box-boxRobo:nth-child(2){
+    grid-area: 2/2;
+    grid-row: 1/1;
+}
+.fundos_box-boxRobo:nth-child(3){
+    grid-area: 1/1;
+    grid-row: 2/2;
+    margin-top: 2.5rem;
+}
+.fundos_box-boxRobo:nth-child(4){
+    grid-area: 2/2;
+    grid-row: 2/2;
+    margin-top: 2.5rem;
+}
+.fundos_box-boxRobo:nth-child(5){
+    grid-area: 1/1;
+    grid-row: 3/3;
+    margin-top: 5rem;
+}
+.fundos_box-boxRobo:nth-child(6){
+    grid-area: 2/2;
+    grid-row: 3/3;
+    margin-top: 5rem;
+}
+
+.fundos_box-tituloColor{
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-top: -.3rem;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
